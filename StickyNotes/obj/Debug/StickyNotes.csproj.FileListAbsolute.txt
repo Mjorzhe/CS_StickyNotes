@@ -1,0 +1,12 @@
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\bin\Debug\StickyNotes.exe.config
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\bin\Debug\StickyNotes.exe
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\bin\Debug\StickyNotes.pdb
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.csproj.AssemblyReference.cache
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.csproj.SuggestedBindingRedirects.cache
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.Form1.resources
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.Properties.Resources.resources
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.csproj.GenerateResource.cache
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.csproj.CoreCompileInputs.cache
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.exe
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.pdb
+C:\Users\heito\source\repos\StickyNotes\StickyNotes\obj\Debug\StickyNotes.Note.resources
