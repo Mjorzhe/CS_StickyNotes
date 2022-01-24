@@ -19,11 +19,12 @@ namespace StickyNotes
         public Note(int _counter)
         {
             InitializeComponent();
-            this._counter = _counter;
+            _counter = _counter % colour.Length;
             textArea.BackColor = getLightColour(_counter);
             panel1.BackColor = getLightColour(_counter);
+            panel2.BackColor = getDarkColour(_counter);
         }
-        int _counter;
+
         String[] colour = { "255;230;105|237;177;74"   //Yellow - Dark Yellow
                            , "162;214;242|75;162;189"   //Cyan - Dark Cyan
                            , "177;232;132|131;191;82"   //Green - Dark Green
@@ -66,14 +67,12 @@ namespace StickyNotes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            buttonMinimize.Location = new Point(424, 0);
             this.WindowState = FormWindowState.Minimized;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            System.Drawing.Color _darkColour = getDarkColour(_counter);
-            panel2.BackColor = _darkColour;
+            
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
