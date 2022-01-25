@@ -205,17 +205,39 @@ namespace StickyNotes
         {
 
         }
+        public static Color ChangeColorBrightness(Color color, float correctionFactor)
+        {
+            float red = (float)color.R;
+            float green = (float)color.G;
+            float blue = (float)color.B;
 
+            if (correctionFactor < 0)
+            {
+                correctionFactor = 1 + correctionFactor;
+                red *= correctionFactor;
+                green *= correctionFactor;
+                blue *= correctionFactor;
+            }
+            else
+            {
+                red = (255 - red) * correctionFactor + red;
+                green = (255 - green) * correctionFactor + green;
+                blue = (255 - blue) * correctionFactor + blue;
+            }
+
+            return Color.FromArgb(color.A, (int)red, (int)green, (int)blue);
+        }
         private void pickColourToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.ColorDialog colourPicker;
             colourPicker = new ColorDialog();
             colourPicker.ShowDialog();
-
-            this.BackColor =        getLightColour(0);
-            textArea.BackColor =    getLightColour(0);
-            panel2.BackColor =      getDarkColour (0);
-            textArea.ForeColor =    getDarkColour (0);
+            Color _primaryColor = colourPicker.Color;
+            Color _secondaryColor = ChangeColorBrightness(colourPicker.Color, -0.3f);
+            this.BackColor =        _primaryColor;
+            textArea.BackColor =    _primaryColor;
+            panel2.BackColor =      _secondaryColor;
+            textArea.ForeColor =    _secondaryColor;
         }
 
         private void menuDropDown_Opening(object sender, CancelEventArgs e)
