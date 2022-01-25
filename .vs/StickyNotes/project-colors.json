@@ -5,7 +5,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Arquivos Diversos",
       "ColorIndex": -1
+    },
+    "d7b6906c-d102-4cd1-a1fd-9f485ac40977": {
+      "ProjectGuid": "d7b6906c-d102-4cd1-a1fd-9f485ac40977",
+      "DisplayName": "StickyNotes",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }
