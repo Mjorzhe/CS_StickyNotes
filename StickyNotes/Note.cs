@@ -27,7 +27,7 @@ namespace StickyNotes
             this.BackColor = getLightColour(_counter);
             textArea.ForeColor = getDarkColour(_counter);
         }
-        
+
         private Size formSize;
         //Overridden methods
         protected override void WndProc(ref Message m)
@@ -124,8 +124,8 @@ namespace StickyNotes
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         //int windowSizeX = 500, windowSizeY = 500;
-        
-        
+
+
         public System.Drawing.Color getLightColour(int _index)
         {
             return Color.FromArgb(Int32.Parse((colour[_index].Split('|')[0]).Split(';')[0]), Int32.Parse((colour[_index].Split('|')[0]).Split(';')[1]), Int32.Parse((colour[_index].Split('|')[0]).Split(';')[2]));
@@ -139,7 +139,7 @@ namespace StickyNotes
 
         private void Note_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -161,7 +161,7 @@ namespace StickyNotes
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
@@ -172,7 +172,7 @@ namespace StickyNotes
 
         private void a(object sender, EventArgs e)
         {
-            
+
         }
 
         private void checkBoxTop_CheckedChanged(object sender, EventArgs e)
@@ -187,7 +187,7 @@ namespace StickyNotes
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            menuDropDown.Show(buttonDropDown, 0, buttonDropDown.Height);
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -200,5 +200,66 @@ namespace StickyNotes
             this.WindowState = FormWindowState.Normal;
             notifyIcon.Visible = false;
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pickColourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ColorDialog colourPicker;
+            colourPicker = new ColorDialog();
+            colourPicker.ShowDialog();
+
+            this.BackColor =        getLightColour(0);
+            textArea.BackColor =    getLightColour(0);
+            panel2.BackColor =      getDarkColour (0);
+            textArea.ForeColor =    getDarkColour (0);
+        }
+
+        private void menuDropDown_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor =        getLightColour(0);
+            textArea.BackColor =    getLightColour(0);
+            panel2.BackColor =      getDarkColour(0);
+            textArea.ForeColor =    getDarkColour(0);
+        }
+
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor =        getLightColour(1);
+            textArea.BackColor =    getLightColour(1);
+            panel2.BackColor =      getDarkColour(1);
+            textArea.ForeColor =    getDarkColour(1);
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor =        getLightColour(2);
+            textArea.BackColor =    getLightColour(2);
+            panel2.BackColor =      getDarkColour(2);
+            textArea.ForeColor =    getDarkColour(2);
+        }
+        private void pinkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor =        getLightColour(3);
+            textArea.BackColor =    getLightColour(3);
+            panel2.BackColor =      getDarkColour(3);
+            textArea.ForeColor =    getDarkColour(3);
+        }
+        private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor =        getLightColour(4);
+            textArea.BackColor =    getLightColour(4);
+            panel2.BackColor =      getDarkColour(4);
+            textArea.ForeColor =    getDarkColour(4);
+        }
+                
     }
 }

@@ -32,13 +32,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Note));
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonDropDown = new System.Windows.Forms.Button();
+            this.menuDropDown = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonFechar = new System.Windows.Forms.Button();
             this.checkBoxTop = new System.Windows.Forms.CheckBox();
             this.textArea = new System.Windows.Forms.RichTextBox();
             this.checkBoxStickDesktop = new System.Windows.Forms.CheckBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.pickColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yellowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
+            this.menuDropDown.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -58,6 +67,7 @@
             // 
             // buttonDropDown
             // 
+            this.buttonDropDown.ContextMenuStrip = this.menuDropDown;
             this.buttonDropDown.FlatAppearance.BorderSize = 0;
             this.buttonDropDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDropDown.Font = new System.Drawing.Font("Corbel", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,6 +78,30 @@
             this.buttonDropDown.Text = "⏷";
             this.buttonDropDown.UseVisualStyleBackColor = true;
             this.buttonDropDown.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // menuDropDown
+            // 
+            this.menuDropDown.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.menuDropDown.Name = "contextMenuStrip1";
+            this.menuDropDown.Size = new System.Drawing.Size(172, 28);
+            this.menuDropDown.Opening += new System.ComponentModel.CancelEventHandler(this.menuDropDown_Opening);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pickColourToolStripMenuItem,
+            this.yellowToolStripMenuItem,
+            this.blueToolStripMenuItem,
+            this.orangeToolStripMenuItem,
+            this.greenToolStripMenuItem,
+            this.pinkToolStripMenuItem});
+            this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F);
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.aboutToolStripMenuItem.Text = "Change Colour";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // buttonMinimize
             // 
@@ -148,6 +182,57 @@
             this.notifyIcon.Visible = true;
             this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDoubleClick);
             // 
+            // pickColourToolStripMenuItem
+            // 
+            this.pickColourToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pickColourToolStripMenuItem.Name = "pickColourToolStripMenuItem";
+            this.pickColourToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.pickColourToolStripMenuItem.Text = "Pick Colour";
+            this.pickColourToolStripMenuItem.Click += new System.EventHandler(this.pickColourToolStripMenuItem_Click);
+            // 
+            // greenToolStripMenuItem
+            // 
+            this.greenToolStripMenuItem.Image = global::StickyNotes.Properties.Resources.green;
+            this.greenToolStripMenuItem.Name = "greenToolStripMenuItem";
+            this.greenToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.greenToolStripMenuItem.Text = "Green";
+            this.greenToolStripMenuItem.Click += new System.EventHandler(this.greenToolStripMenuItem_Click);
+            // 
+            // pinkToolStripMenuItem
+            // 
+            this.pinkToolStripMenuItem.Image = global::StickyNotes.Properties.Resources.pink;
+            this.pinkToolStripMenuItem.Name = "pinkToolStripMenuItem";
+            this.pinkToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.pinkToolStripMenuItem.Text = "Pink";
+            this.pinkToolStripMenuItem.Click += new System.EventHandler(this.pinkToolStripMenuItem_Click);
+            // 
+            // yellowToolStripMenuItem
+            // 
+            this.yellowToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.yellowToolStripMenuItem.Image = global::StickyNotes.Properties.Resources.yellow;
+            this.yellowToolStripMenuItem.Name = "yellowToolStripMenuItem";
+            this.yellowToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.yellowToolStripMenuItem.Text = "Yellow";
+            this.yellowToolStripMenuItem.Click += new System.EventHandler(this.yellowToolStripMenuItem_Click);
+            // 
+            // blueToolStripMenuItem
+            // 
+            this.blueToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.blueToolStripMenuItem.Image = global::StickyNotes.Properties.Resources.cyan;
+            this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.blueToolStripMenuItem.Text = "Cyan";
+            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
+            // 
+            // orangeToolStripMenuItem
+            // 
+            this.orangeToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.orangeToolStripMenuItem.Image = global::StickyNotes.Properties.Resources.orange;
+            this.orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
+            this.orangeToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.orangeToolStripMenuItem.Text = "Orange";
+            this.orangeToolStripMenuItem.Click += new System.EventHandler(this.orangeToolStripMenuItem_Click);
+            // 
             // Note
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +252,7 @@
             this.Text = "Note";
             this.Load += new System.EventHandler(this.Note_Load);
             this.panel2.ResumeLayout(false);
+            this.menuDropDown.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +267,13 @@
         private System.Windows.Forms.Button buttonDropDown;
         private System.Windows.Forms.CheckBox checkBoxStickDesktop;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ContextMenuStrip menuDropDown;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pickColourToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yellowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orangeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem greenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pinkToolStripMenuItem;
     }
 }
