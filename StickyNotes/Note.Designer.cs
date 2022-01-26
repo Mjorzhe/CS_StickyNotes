@@ -84,7 +84,7 @@
             this.menuDropDown.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.menuDropDown.Name = "contextMenuStrip1";
-            this.menuDropDown.Size = new System.Drawing.Size(172, 28);
+            this.menuDropDown.Size = new System.Drawing.Size(181, 50);
             this.menuDropDown.Opening += new System.ComponentModel.CancelEventHandler(this.menuDropDown_Opening);
             // 
             // aboutToolStripMenuItem
@@ -99,7 +99,9 @@
             this.pinkToolStripMenuItem});
             this.aboutToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F);
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.aboutToolStripMenuItem.ShowShortcutKeys = false;
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.aboutToolStripMenuItem.Text = "Change Colour";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -186,7 +188,8 @@
             // 
             this.pickColourToolStripMenuItem.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pickColourToolStripMenuItem.Name = "pickColourToolStripMenuItem";
-            this.pickColourToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.pickColourToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.pickColourToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.pickColourToolStripMenuItem.Text = "Pick Colour";
             this.pickColourToolStripMenuItem.Click += new System.EventHandler(this.pickColourToolStripMenuItem_Click);
             // 

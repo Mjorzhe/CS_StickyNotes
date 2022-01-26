@@ -234,10 +234,13 @@ namespace StickyNotes
             colourPicker.ShowDialog();
             Color _primaryColor = colourPicker.Color;
             Color _secondaryColor = ChangeColorBrightness(colourPicker.Color, -0.3f);
-            this.BackColor =        _primaryColor;
-            textArea.BackColor =    _primaryColor;
-            panel2.BackColor =      _secondaryColor;
-            textArea.ForeColor =    _secondaryColor;
+            //the value -16777216 is equal to the value that colourPicker.Color returns when the button "cancel" (or ESC) is pressed
+            if (colourPicker.Color.ToArgb() != -16777216) { 
+                this.BackColor =        _primaryColor;
+                textArea.BackColor =    _primaryColor;
+                panel2.BackColor =      _secondaryColor;
+                textArea.ForeColor =    _secondaryColor;
+            }
         }
 
         private void menuDropDown_Opening(object sender, CancelEventArgs e)
